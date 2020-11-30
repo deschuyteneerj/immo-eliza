@@ -1,0 +1,117 @@
+@import "variable_override";
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "header";
+
+@keyframes disappear {
+  0% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  100% {
+    opacity: 0;
+    height: 0px;
+    transform: translateY(-803px);
+  }
+}
+@keyframes appear {
+  0% {
+    transform: translateY(1000px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes bgAnimation {
+  100% {
+    background-position: center -650px;
+  }
+}
+
+body {
+  color: rgb(2, 24, 68);
+  background: url("../images/background.jpg") no-repeat top center;
+  perspective: 1000px;
+  perspective-origin: 50% 50%;
+}
+.bg_animation {
+  animation: bgAnimation 1.8s ease-in-out forwards;
+}
+
+section {
+  z-index: -1;
+}
+
+.typeCard {
+  width: 50%;
+  input {
+    display: none;
+  }
+  label {
+    padding: 10px 0;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    border: solid 1px rgba(1, 151, 246, 0.4);
+  }
+  input:checked + label {
+    border: solid 2px rgba(2, 24, 68, 0.8);
+  }
+}
+.typeImg {
+  height: 50px;
+  width: 50px;
+}
+
+.mainForm {
+  border: solid 3px rgb(2, 24, 68);
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.boxShadow {
+  box-shadow: 10px 10px 12px 0px rgb(0, 0, 0);
+  border-radius: 20px;
+}
+canvas {
+  border: solid 3px rgb(2, 24, 68);
+  box-shadow: 10px 10px 12px 0px rgb(0, 0, 0);
+  border-radius: 20px;
+}
+.map {
+  border: solid 3px rgb(2, 24, 68);
+}
+
+.submitButton {
+  color: white;
+  background-color: rgba(1, 151, 246, 0.6);
+  padding: 5px 7px;
+  border: none;
+  border-radius: 5px;
+  display: block;
+  margin-left: auto;
+}
+
+.disappear {
+  animation: disappear 2s ease-in-out forwards;
+}
+
+.info {
+  border: solid 3px rgb(2, 24, 68);
+  background: rgba(255, 255, 255, 0.9);
+  padding: 10px;
+}
+
+.beforeSubmit {
+  display: none;
+}
+.appear {
+  animation: appear 2s ease-in-out forwards;
+}
+
+footer {
+  margin-top: 5rem;
+  background: rgba(255, 255, 255, 0.9);
+}
+ul {
+  list-style-position: inside;
+}
